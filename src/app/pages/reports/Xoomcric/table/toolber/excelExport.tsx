@@ -75,7 +75,7 @@ const ExcelExport = () => {
 
   // console.log(data)
   if (data.length > 0 && !loading)
-    return <CSVDownload target='_self' filename={'AIHistory.csv'} data={data} />
+    return <CSVDownload target='_self' filename={'XoomCric.csv'} data={data} />
 
   return (
     <div className='menu-item px-3'>
