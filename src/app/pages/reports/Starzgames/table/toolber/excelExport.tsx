@@ -1,10 +1,10 @@
-import {useEffect, useRef, useState} from 'react'
-import {CSVLink} from 'react-csv'
-import {isNotEmpty, stringifyRequestQueryWithoutPage} from '../../../../../../_metronic/helpers'
-import {AIH_REPORT} from '../../../../../constants/api.constants'
-import {getQueryRequest} from '../../../../../library/api.helper'
-import {useQueryRequest} from '../../core/QueryRequestProvider'
-import {TableModal} from '../../core/_models'
+import { useEffect, useRef, useState } from 'react'
+import { CSVLink } from 'react-csv'
+import { isNotEmpty, stringifyRequestQueryWithoutPage } from '../../../../../../_metronic/helpers'
+import { STARZGAMES_REPORT } from '../../../../../constants/api.constants'
+import { getQueryRequest } from '../../../../../library/api.helper'
+import { useQueryRequest } from '../../core/QueryRequestProvider'
+import { TableModal } from '../../core/_models'
 
 const CSVDownload = (props: any) => {
   const btnRef: any = useRef(null)
@@ -42,7 +42,7 @@ const ExcelExport = () => {
           .join('&')
       : ''
     let query = `page=1&items_per_page=100000&${stringifyRequestQueryWithoutPage(state)}`
-    const res: any = await getQueryRequest(`${AIH_REPORT}?${query}`)
+    const res: any = await getQueryRequest(`${STARZGAMES_REPORT}?${query}`)
     setLoading(false)
 
     if (res.success && res.status_code === 200) {
