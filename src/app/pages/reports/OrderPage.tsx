@@ -1,14 +1,15 @@
-import { Navigate, Outlet, Route, Routes } from 'react-router-dom'
-import { PageTitle } from '../../../_metronic/layout/core'
-import { AIHReport } from './AIHistory/OrdertListWrapper'
-import { ADFReport } from './ArtDeepFilters/OrdertListWrapper'
-import { BTSReport } from './BedtimeStories/OrdertListWrapper'
-import { OrdertListWrapper } from './order-list/OrdertListWrapper'
-import { StarzgamesReport } from './Starzgames/OrdertListWrapper'
-import { UbundleReport } from './Ubundle/OrdertListWrapper'
-import { WellbeReport } from './Wellbe/OrdertListWrapper'
-import { XoomcricReport } from './Xoomcric/OrdertListWrapper'
-import { XoomsportsReport } from './Xoomsports/OrdertListWrapper'
+import {Navigate, Outlet, Route, Routes} from 'react-router-dom'
+import {PageTitle} from '../../../_metronic/layout/core'
+import {AIHReport} from './AIHistory/OrdertListWrapper'
+import {ADFReport} from './ArtDeepFilters/OrdertListWrapper'
+import {BTSReport} from './BedtimeStories/OrdertListWrapper'
+import {GameApexReport} from './GameApex/OrdertListWrapper'
+import {OrdertListWrapper} from './order-list/OrdertListWrapper'
+import {StarzgamesReport} from './Starzgames/OrdertListWrapper'
+import {UbundleReport} from './Ubundle/OrdertListWrapper'
+import {WellbeReport} from './Wellbe/OrdertListWrapper'
+import {XoomcricReport} from './Xoomcric/OrdertListWrapper'
+import {XoomsportsReport} from './Xoomsports/OrdertListWrapper'
 
 const OrderPage = () => {
   return (
@@ -92,6 +93,16 @@ const OrderPage = () => {
             <>
               <PageTitle>StarzGames</PageTitle>
               <StarzgamesReport />
+            </>
+          }
+        />
+
+        <Route
+          path='/gameapex'
+          element={
+            <>
+              <PageTitle>GameApex</PageTitle>
+              <GameApexReport />
             </>
           }
         />
